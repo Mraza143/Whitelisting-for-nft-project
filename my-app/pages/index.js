@@ -22,9 +22,9 @@ Whitelist Contract Address: 0x199A7d7Ae7a73d316dB0a1552D54f76105c5c212
     const web3Provider = new providers.Web3Provider(provider);
 
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 5) {
+      window.alert("Change the network to Goerli");
+      throw new Error("Change network to Goerli");
     }
 
     if (needSigner) {
@@ -142,7 +142,7 @@ Whitelist Contract Address: 0x199A7d7Ae7a73d316dB0a1552D54f76105c5c212
     if (!walletConnected) {
 
       web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
+        network: "goerli",
         providerOptions: {},
         disableInjectedProvider: false,
       });
